@@ -1,4 +1,6 @@
-test code, not a "project"
+test/example code, not a "project"
+
+crib code at will
 
 external dependencies:
 	- harfbuzz

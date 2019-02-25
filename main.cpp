@@ -341,7 +341,7 @@ struct subtitle {
 int main(int argc, char ** argv)
 {
     init_font();
-    auto mysub = subtitle("「And then he said ゲームを始めるか」〰〰〰---～～～", FONTSIZE, MODE);
+    auto mysub = subtitle("【テストｔｅｓｔ１２３test123】ー―～〰", FONTSIZE, MODE);
     
     int width  = mysub.maxx - mysub.minx;
     int height = mysub.maxy - mysub.miny;

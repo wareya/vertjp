@@ -43,6 +43,7 @@ auto fontname = "NotoSansCJKjp-Regular.otf";
 
 #define FONTSIZE 48
 #define MODE 1 // 0: horizontal ltr; 1: vertical ttb
+#define BASELINE_HACK 0.385
 
 #include "orientation.cpp"
 
@@ -168,7 +169,7 @@ struct glyph
                 rotate(x, y);
                 swap(w, h);
                 x -= w;
-                x -= FONTSIZE*0.28; // stupid hack because I don't want to attempt to guess baselines
+                x -= FONTSIZE*BASELINE_HACK; // stupid hack because I don't want to attempt to guess baselines
             }
             else
                 image = sprite_from_mono(bitmap.buffer, w, h);
@@ -340,7 +341,7 @@ struct subtitle {
 int main(int argc, char ** argv)
 {
     init_font();
-    auto mysub = subtitle("「And then he said---ゲームを始めるか」", FONTSIZE, MODE);
+    auto mysub = subtitle("「And then he said ゲームを始めるか」〰〰〰---～～～", FONTSIZE, MODE);
     
     int width  = mysub.maxx - mysub.minx;
     int height = mysub.maxy - mysub.miny;

@@ -8,3 +8,4 @@ external dependencies:
 * a font (e.g. NotoSansCJKjp-Regular.otf)
 * VerticalOrientation-17.txt
 
+![](https://i.imgur.com/UfIPHR4.png)
